@@ -7,11 +7,11 @@
 - A USB stick of 4 GB or more (it will be erased).
 
 ## 2. Get the ISO and check it
-1. Download the ISO (or the `.part00`, `.part01` files if the release is split) and `LMG-OS-amd64.iso.sha256` from the **Releases** page.
+1. Download the ISO (or the `.part00`, `.part01` files if the release is split) and `LMG-OS-1.1-amd64.iso.sha256` from the **Releases** page.
 2. If the ISO is split, join the parts:
-   - Linux / macOS: `cat LMG-OS-amd64.iso.part* > LMG-OS-amd64.iso`
-   - Windows (Command Prompt): `copy /b LMG-OS-amd64.iso.part00+LMG-OS-amd64.iso.part01 LMG-OS-amd64.iso`
-3. Check the file: `sha256sum -c LMG-OS-amd64.iso.sha256` (Linux) — it must say `OK`.
+   - Linux / macOS: `cat LMG-OS-1.1-amd64.iso.part* > LMG-OS-1.1-amd64.iso`
+   - Windows (Command Prompt): `copy /b LMG-OS-1.1-amd64.iso.part00+LMG-OS-1.1-amd64.iso.part01 LMG-OS-1.1-amd64.iso`
+3. Check the file: `sha256sum -c LMG-OS-1.1-amd64.iso.sha256` (Linux) — it must say `OK`.
 
 ## 3. Write it to a USB stick
 Use **Rufus** (choose **DD Image mode** when asked), **balenaEtcher**, or on Linux `dd`. This erases the stick.

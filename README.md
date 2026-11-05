@@ -17,7 +17,7 @@
 - Wide hardware support: AMD / Intel / NVIDIA, Wi-Fi, Bluetooth, Android / iPhone
 
 ## Download
-Get the ISO and `LMG-OS-amd64.iso.sha256` from **Releases**. Check it with `sha256sum -c LMG-OS-amd64.iso.sha256`, write it with Rufus (DD mode), balenaEtcher or `dd`. Full steps: [MANUAL.en.md](MANUAL.en.md).
+Get the ISO and `LMG-OS-1.1-amd64.iso.sha256` from **Releases**. Check it with `sha256sum -c LMG-OS-1.1-amd64.iso.sha256`, write it with Rufus (DD mode), balenaEtcher or `dd`. Full steps: [MANUAL.en.md](MANUAL.en.md).
 
 Minimum: 64-bit CPU, 2 GB RAM, 15 GB disk.
 

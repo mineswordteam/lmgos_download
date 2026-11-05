@@ -9,11 +9,11 @@
 - یک فلش ۴ گیگابایتی یا بیشتر (پاک می‌شود).
 
 ## ۲. دریافت و بررسی ISO
-1. فایل ISO (یا فایل‌های `.part00` و `.part01` اگر ریلیز تکه‌تکه است) و `LMG-OS-amd64.iso.sha256` را از صفحه‌ی **Releases** دانلود کنید.
+1. فایل ISO (یا فایل‌های `.part00` و `.part01` اگر ریلیز تکه‌تکه است) و `LMG-OS-1.1-amd64.iso.sha256` را از صفحه‌ی **Releases** دانلود کنید.
 2. اگر تکه‌تکه است، آن‌ها را به هم بچسبانید:
-   - لینوکس / مک: `cat LMG-OS-amd64.iso.part* > LMG-OS-amd64.iso`
-   - ویندوز (Command Prompt): `copy /b LMG-OS-amd64.iso.part00+LMG-OS-amd64.iso.part01 LMG-OS-amd64.iso`
-3. سالم بودن را بررسی کنید: `sha256sum -c LMG-OS-amd64.iso.sha256` (در لینوکس) — باید `OK` بنویسد.
+   - لینوکس / مک: `cat LMG-OS-1.1-amd64.iso.part* > LMG-OS-1.1-amd64.iso`
+   - ویندوز (Command Prompt): `copy /b LMG-OS-1.1-amd64.iso.part00+LMG-OS-1.1-amd64.iso.part01 LMG-OS-1.1-amd64.iso`
+3. سالم بودن را بررسی کنید: `sha256sum -c LMG-OS-1.1-amd64.iso.sha256` (در لینوکس) — باید `OK` بنویسد.
 
 ## ۳. نوشتن روی فلش
 از **Rufus** (در پرسش مربوطه حالت **DD Image** را انتخاب کنید)، **balenaEtcher** یا در لینوکس از `dd` استفاده کنید. محتوای فلش پاک می‌شود.

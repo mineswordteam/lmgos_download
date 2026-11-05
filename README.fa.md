@@ -19,7 +19,7 @@
 - پشتیبانی گسترده از سخت‌افزار: AMD / Intel / NVIDIA، وای‌فای، بلوتوث، اندروید / آیفون
 
 ## دانلود
-فایل ISO و `LMG-OS-amd64.iso.sha256` را از **Releases** بگیرید. با `sha256sum -c LMG-OS-amd64.iso.sha256` بررسی و با Rufus (حالت DD)، balenaEtcher یا `dd` روی فلش بنویسید. مراحل کامل: [MANUAL.fa.md](MANUAL.fa.md).
+فایل ISO و `LMG-OS-1.1-amd64.iso.sha256` را از **Releases** بگیرید. با `sha256sum -c LMG-OS-1.1-amd64.iso.sha256` بررسی و با Rufus (حالت DD)، balenaEtcher یا `dd` روی فلش بنویسید. مراحل کامل: [MANUAL.fa.md](MANUAL.fa.md).
 
 حداقل: پردازنده‌ی ۶۴ بیتی، ۲ گیگابایت رم، ۱۵ گیگابایت دیسک.
 
