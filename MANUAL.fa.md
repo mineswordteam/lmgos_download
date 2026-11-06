@@ -2,7 +2,7 @@
 
 # LMG OS — دفترچه‌ی راهنما (فارسی)
 
-**LMG OS (Logic Mind Grid)** نسخه‌ی ۱.۰ · ساخته‌ی **Minesword Team** · بر پایه‌ی Debian 13 و XFCE · تماس: minesword.team.iran@gmail.com
+**LMG OS (Logic Mind Grid)** نسخه‌ی ۱.۱ · ساخته‌ی **Minesword Team** · بر پایه‌ی Debian 13 و XFCE · تماس: minesword.team.iran@gmail.com
 
 ## ۱. به چه چیزی نیاز دارید
 - کامپیوتر ۶۴ بیتی (Intel/AMD)، **۲ گیگابایت رم یا بیشتر** و **۱۵ گیگابایت فضای خالی** برای نصب.
