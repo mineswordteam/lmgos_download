@@ -12,7 +12,12 @@ curl -fsSL "$BASE/lmg-1.1-patch.tar.gz" -o "$T/p.tgz"
 curl -fsSL "$BASE/lmg-1.1-patch.sha256" -o "$T/p.sha"
 ( cd "$T" && echo "$(cut -d' ' -f1 p.sha)  p.tgz" | sha256sum -c - ) || { echo "The download is damaged. Try again."; exit 1; }
 # stop a stuck update check first (it holds the package lock)
-[ -n "$ROOT" ] || { systemctl stop lmg-update-check.timer lmg-update-check.service 2>/dev/null; pkill -f 'lmg-helper update-auto' 2>/dev/null; true; }
+if [ -z "$ROOT" ]; then
+  systemctl stop lmg-update-check.timer 2>/dev/null || true
+  timeout 20 systemctl stop lmg-update-check.service 2>/dev/null || true
+  pkill -f 'lmg-helper update-auto' 2>/dev/null || true
+  pkill -x apt-get 2>/dev/null || true
+fi
 # wait for other package jobs instead of failing on the lock
 for i in $(seq 1 60); do
   fuser /var/lib/dpkg/lock-frontend /var/lib/apt/lists/lock >/dev/null 2>&1 || break
