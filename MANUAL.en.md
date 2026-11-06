@@ -1,6 +1,6 @@
 # LMG OS — User Manual (English)
 
-**LMG OS (Logic Mind Grid)** 1.0 · by **Minesword Team** · Debian 13 + XFCE · contact: minesword.team.iran@gmail.com
+**LMG OS (Logic Mind Grid)** 1.1 · by **Minesword Team** · Debian 13 + XFCE · contact: minesword.team.iran@gmail.com
 
 ## 1. What you need
 - A 64-bit computer (Intel/AMD), **2 GB RAM or more**, **15 GB free disk** to install.
