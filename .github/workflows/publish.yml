@@ -1,0 +1,36 @@
+name: Publish a pre-release from the build repo
+on:
+  workflow_dispatch:
+    inputs:
+      tag:   { description: "Tag to create", default: "v1.2" }
+      build: { description: "Release of lmg-os/Lmgosbuild to take files from", default: "build-20" }
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download the build release (the build repo must be public while this runs)
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          mkdir out
+          gh release download "${{ inputs.build }}" -R lmg-os/Lmgosbuild -D out
+          ver="${{ inputs.tag }}"; ver="${ver#v}"
+          cd out
+          # the upgrade check takes the first .iso it sees: ship only the full ISO, under the release name
+          rm -f LMG-OS-net-amd64.iso LMG-OS-net-amd64.iso.sha256
+          sha256sum -c LMG-OS-amd64.iso.sha256
+          mv LMG-OS-amd64.iso "LMG-OS-$ver-amd64.iso"
+          sha256sum "LMG-OS-$ver-amd64.iso" > "LMG-OS-$ver-amd64.iso.sha256"; rm -f LMG-OS-amd64.iso.sha256
+          cd ..
+          # licence and manuals: from this repo, and the manuals of the previous release
+          for f in LICENSE LICENSE.md LICENSE.txt COPYING; do [ -f "$f" ] && cp "$f" out/; done
+          gh release download v1.1 -R "${{ github.repository }}" -p 'MANUAL.*' -D out 2>/dev/null || true
+          ls -la out
+      - name: Create the pre-release
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh release create "${{ inputs.tag }}" out/* --repo "${{ github.repository }}" \
+            --prerelease --title "LMG OS ${{ inputs.tag }}" --notes "LMG OS ${{ inputs.tag }}"
