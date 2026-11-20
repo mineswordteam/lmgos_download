@@ -1,0 +1,31 @@
+name: Publish online installer
+on:
+  workflow_dispatch:
+    inputs:
+      source_tag:
+        description: "Build tag in lmg-os/Lmgosbuild that holds the online installer"
+        default: "build-20"
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the online installer from the build release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir out && cd out
+          gh release download "${{ inputs.source_tag }}" -R lmg-os/Lmgosbuild -p "LMG-OS-net-amd64.iso" -p "LMG-OS-net-amd64.iso.sha256"
+          mv LMG-OS-net-amd64.iso LMG-OS-online-amd64.iso
+          sha256sum LMG-OS-online-amd64.iso > LMG-OS-online-amd64.iso.sha256
+          ls -l; cat LMG-OS-online-amd64.iso.sha256
+      - name: Create the release (pre-release, so it never becomes "Latest")
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete online-installer --cleanup-tag -y -R "${{ github.repository }}" || true
+          gh release create online-installer out/LMG-OS-online-amd64.iso out/LMG-OS-online-amd64.iso.sha256 \
+            -R "${{ github.repository }}" --prerelease --latest=false \
+            --title "LMG OS Online installer" \
+            --notes "Small installer (about 250 MB). It downloads the latest LMG OS release while installing, so it needs the internet. Not an update: use the full ISO of a version to upgrade."
