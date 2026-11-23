@@ -2,7 +2,7 @@
 
 **English**
 
-1. **Beta software.** LMG OS 1.0 is a first public release. It is provided **"AS IS", without warranty of any kind**, express or implied, including merchantability and fitness for a particular purpose (see sections 15 and 16 of the GNU GPL v3 in `LICENSE`).
+1. **Beta software.** LMG OS is early-stage beta software. It is provided **"AS IS", without warranty of any kind**, express or implied, including merchantability and fitness for a particular purpose (see sections 15 and 16 of the GNU GPL v3 in `LICENSE`).
 2. **Limitation of liability.** To the extent allowed by law, Minesword Team is not liable for any loss or damage, including loss of data, from using, installing, updating or being unable to use LMG OS.
 3. **Back up your data.** Installing, partitioning, **Fast boot**, **USB repair** and updates can change or lose data. "Restore previous version" restores programs changed by the last update, not your personal files. The **USB scanner** reduces some risks but cannot find every malicious device or file, and cannot protect hardware against electrical attacks. Use only devices you trust.
 4. **Windows programs** run through Wine and are not guaranteed to work. You are responsible for having a license for any Windows program you use. LMG OS does not include Windows or any Microsoft software.

@@ -1,6 +1,6 @@
 # LMG OS (Logic Mind Grid)
 
-**A brand-new Linux based on Debian** — light, secure, neon-blue desktop. By **Minesword Team**. Release date: **October 30, 2026**.
+**A brand-new Linux based on Debian** — light, secure, neon-blue desktop. By **Minesword Team**. First release: October 30, 2026. **Latest version: 1.2 (November 19, 2026).**
 
 [فارسی](README.fa.md) · [User manual](MANUAL.en.md) · [دفترچه‌ی فارسی](MANUAL.fa.md) · [Release notes](RELEASE_NOTES.md)
 
@@ -17,7 +17,7 @@
 - Wide hardware support: AMD / Intel / NVIDIA, Wi-Fi, Bluetooth, Android / iPhone
 
 ## Download
-Get the ISO and `LMG-OS-1.1-amd64.iso.sha256` from **Releases**. Check it with `sha256sum -c LMG-OS-1.1-amd64.iso.sha256`, write it with Rufus (DD mode), balenaEtcher or `dd`. Full steps: [MANUAL.en.md](MANUAL.en.md).
+Get the 1.2 ISO and `LMG-OS-1.2-amd64.iso.sha256` from **Releases**. Check it with `sha256sum -c LMG-OS-1.2-amd64.iso.sha256`, write it with Rufus (DD mode), balenaEtcher or `dd`. Full steps: [MANUAL.en.md](MANUAL.en.md).
 
 Minimum: 64-bit CPU, 2 GB RAM, 15 GB disk.
 

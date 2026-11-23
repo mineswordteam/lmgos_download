@@ -1,3 +1,55 @@
+# LMG OS 1.2 — Release notes / یادداشت انتشار
+
+**Minesword Team · November 19, 2026 / ۲۸ آبان ۱۴۰۵**
+
+## English
+LMG OS 1.2 is the latest version: security, Windows gaming and a new look.
+
+**What is new**
+- **Ultimate Security (Alt+F3):** a cancellable 5-second countdown, then the computer is cut off from the world (internet, Wi-Fi, Bluetooth, location; network, camera and USB-storage drivers unloaded and blocked). Alt+F3 again (admin password) or a restart turns it off.
+- **USB Guard:** a USB device is checked before you get access (BadUSB detection, file-system check and repair, malware-pattern scan).
+- **Quiet security hardening:** safer kernel and network defaults that do not change how you work; Wine, games, VPNs and developer tools keep working.
+- **LMG Driver:** finds the drivers, firmware and gaming tools that fit this computer and installs them after a restart.
+- **Windows gaming:** Windows Gaming card, DXVK set up automatically for Wine programs, FPS fallback, Wine drive mapping (C:, D:… show your real folders and drives).
+- **LMG Connector:** control the computer from an Android phone over Wi-Fi, LAN cable or hotspot, and send files and text both ways. Android app 1.2 is included.
+- **"Program not responding" window** after 10 seconds (Wine programs and games are ignored); **better laptop battery** with TLP.
+- **New look:** neon window frame, new shutdown and restart animation, sidebar that fits the screen, LMG wallpaper.
+- **Online installer:** a small ISO (about 250 MB) that downloads the newest LMG OS while installing; it shows no version number.
+- Sturdier system: health report in System Test, repaired package-database trigger problem, Korean font.
+
+**Upgrading:** from 1.0 or 1.1 open Control Panel → LMG Update, or boot the 1.2 ISO and choose **Upgrade** in the installer. Your files, settings and programs are kept; back up important data first.
+
+**Files in this release:** `LMG-OS-1.2-amd64.iso` and its `.sha256` (no GPG signature for 1.2 yet; the 1.1 file is signed). Check it with `sha256sum -c LMG-OS-1.2-amd64.iso.sha256`. Write it to a USB drive with Rufus (DD mode), balenaEtcher or `dd`. The online installer is `LMG-OS-online-amd64.iso`.
+
+**Known limitations**
+- Still a beta: report bugs to minesword.team.iran@gmail.com with your computer model and a photo of the error.
+- Bluetooth, fast boot and Windows programs through Wine depend on your hardware and may not work everywhere.
+
+## فارسی
+LMG OS 1.2 آخرین نسخه است: امنیت، بازی ویندوزی و ظاهر جدید.
+
+**تازه‌ها**
+- **امنیت نهایی (Alt+F3):** شمارش معکوس ۵ ثانیه‌ای (قابل لغو) و بعد کامپیوتر از دنیای بیرون جدا می‌شود (اینترنت، وای‌فای، بلوتوث، مکان؛ درایورهای شبکه، دوربین و حافظهٔ USB خارج و مسدود می‌شوند). با Alt+F3 دوباره (با رمز مدیر) یا ریستارت خاموش می‌شود.
+- **نگهبان USB:** هر دستگاه USB پیش از دسترسی شما بررسی می‌شود (تشخیص BadUSB، بررسی و تعمیر سیستم فایل، اسکن الگوهای بدافزار).
+- **سخت‌سازی بی‌صدای امنیت:** پیش‌فرض‌های امن‌تر هسته و شبکه بدون تغییر در روش کار؛ Wine، بازی‌ها، VPN و ابزارهای برنامه‌نویسی کار می‌کنند.
+- **LMG Driver:** درایورها، فریمور و ابزارهای بازی مناسب این کامپیوتر را پیدا می‌کند و بعد از ریستارت نصب می‌کند.
+- **بازی ویندوزی:** کارت بازی ویندوزی، راه‌اندازی خودکار DXVK برای Wine، نمایش FPS جایگزین و نگاشت درایوهای Wine (C:، D:… پوشه‌ها و درایوهای واقعی شما).
+- **LMG Connector:** کنترل کامپیوتر از گوشی اندروید با وای‌فای، کابل شبکه یا هات‌اسپات و ارسال فایل و متن در دو جهت. برنامهٔ اندروید 1.2 همراه ISO است.
+- **پنجرهٔ «برنامه پاسخ نمی‌دهد»** بعد از ۱۰ ثانیه (برنامه‌های Wine و بازی‌ها نادیده گرفته می‌شوند)؛ **باتری بهتر لپ‌تاپ** با TLP.
+- **ظاهر جدید:** قاب نئونی پنجره، انیمیشن جدید خاموش و ریستارت، نوار کناری سازگار با صفحه، والپیپر LMG.
+- **نصب‌کنندهٔ آنلاین:** ISO کوچک (حدود ۲۵۰ مگابایت) که هنگام نصب جدیدترین LMG OS را دانلود می‌کند؛ شماره نسخه نشان نمی‌دهد.
+- سیستم محکم‌تر: گزارش سلامت در تست سیستم، تعمیر مشکل trigger پایگاه بسته‌ها، فونت کره‌ای.
+
+**ارتقا:** از 1.0 یا 1.1 در پنل کنترل ← LMG Update، یا ISO نسخهٔ 1.2 را بوت کنید و در نصب‌کننده **Upgrade** را بزنید. فایل‌ها، تنظیمات و برنامه‌هایتان می‌مانند؛ قبلش از داده‌های مهم پشتیبان بگیرید.
+
+**فایل‌های این انتشار:** `LMG-OS-1.2-amd64.iso` و `.sha256` آن (برای 1.2 هنوز امضای GPG نداریم؛ فایل 1.1 امضا شده است). با `sha256sum -c LMG-OS-1.2-amd64.iso.sha256` بررسی کنید. با Rufus (حالت DD)، balenaEtcher یا `dd` روی فلش بنویسید. نصب‌کنندهٔ آنلاین `LMG-OS-online-amd64.iso` است.
+
+**محدودیت‌های شناخته‌شده**
+- هنوز بتا است: اشکال‌ها را با مدل کامپیوتر و عکس خطا به minesword.team.iran@gmail.com بفرستید.
+- بلوتوث، Fast boot و برنامه‌های ویندوز با Wine به سخت‌افزار شما بستگی دارند و ممکن است همه‌جا کار نکنند.
+
+---
+
 # LMG OS 1.1 — Release notes / یادداشت انتشار
 
 **Minesword Team · November 5, 2026 / ۱۴ آبان ۱۴۰۵**
